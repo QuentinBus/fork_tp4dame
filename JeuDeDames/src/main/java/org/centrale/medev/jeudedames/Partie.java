@@ -32,4 +32,11 @@ public class Partie {
          }
         return null; 
     }
+    
+    private ArrayList<Pion> verifierPrisePossible(Pion pion){
+        ArrayList<Pion> listPion;
+        listPion = new ArrayList<Pion>();
+        
+        return listPion;
+    }
 }
