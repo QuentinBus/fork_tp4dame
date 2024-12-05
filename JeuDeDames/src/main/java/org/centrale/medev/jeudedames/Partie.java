@@ -33,10 +33,29 @@ public class Partie {
         return null; 
     }
     
+    private ArrayList<Pion> verifierPrisePossible(boolean estBlanc){
+        for (int i = 0; i < this.getListePions().size(); i++) {
+            Pion pionTest = this.getListePions().get(i);
+           if (pionTest.isBlanc() == estBlanc){
+               verifierPrisePossible(pionTest);
+           }
+        }
+    }
+    
     private ArrayList<Pion> verifierPrisePossible(Pion pion){
-        ArrayList<Pion> listPion;
-        listPion = new ArrayList<Pion>();
+        ArrayList<Pion> listePionPrenables;
+        listePionPrenables = new ArrayList<Pion>();
+        int[][] mouvements = {
+            {1,1},
+            {1,-1},
+            {-1,-1},
+            {-1,1}
+        };
         
-        return listPion;
+        for (int i = 0; i < mouvements.length; i++){
+            
+        }
+        
+        return listePionPrenables;
     }
 }
